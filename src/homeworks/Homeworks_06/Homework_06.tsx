@@ -16,7 +16,7 @@ function Homework_06() {
   ];
  return (
     <div>
-      {cars.map((car, index) => (
+      {cars.map((car:Car, index: number) => (
         <div className="card" key={index}>
           <p>Brand: {car.brand}</p>
           <p>Price: {car.price}</p>
