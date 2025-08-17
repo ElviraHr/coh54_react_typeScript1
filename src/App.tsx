@@ -1,34 +1,31 @@
-
-import type { JSX } from 'react'
-import './App.css'
+import type { JSX } from "react";
+import "./App.css";
 // lessons
 // import Lesson_06 from './lessons/Lesson06/Lesson_06'
-
+import Lesson_07 from "./lessons/Lesson_07/Lesson_07";
 //homeworks
-import Homework_06 from './homeworks/Homeworks_06/Homework_06'
-
+// import Homework_06 from './homeworks/Homeworks_06/Homework_06'
+// import Homework_06 from "homeworks/Homeworks_06/Homework_06";
 // consultations
 // import Sandwich from './Sandwich/Sandwich'
 
-function App():JSX.Element {
-  
+function App(): JSX.Element {
   return (
     <>
-    {/* <div className="app">My First TypeScript Component</div> */}
-    {/* lessons */}
+      {/* <div className="app">My First TypeScript Component</div> */}
 
-    {/* <Lesson_06 /> */}
+      {/* lessons */}
+      {/* <Lesson_06 /> */}
 
-    {/* homeworks */}
-    <Homework_06 />
+      <Lesson_07 />
 
-    {/* <Sandwich /> */}
-    
-    
-    
-    
+      {/* homeworks */}
+      {/* <Homework_06 /> */}
+
+      {/* consultations */}
+      {/* <Sandwich /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

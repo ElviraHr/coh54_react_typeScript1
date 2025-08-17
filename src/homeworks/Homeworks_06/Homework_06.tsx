@@ -1,12 +1,10 @@
+import {type ReactNode} from "react";
+import { v4 } from "uuid";
 import "./styles.css";
+import {type Car} from "./types";
 
 function Homework_06() {
-  interface Car {
-    brand: string;
-    price: number;
-    isDiesel: boolean;
-  }
-
+ 
   const cars: Car[] = [
     { brand: "BMW", price: 20000, isDiesel: true },
     { brand: "Mercedes", price: 22000, isDiesel: false },
@@ -14,13 +12,15 @@ function Homework_06() {
     { brand: "Nissan", price: 25000, isDiesel: false },
     { brand: "Audi", price: 50000, isDiesel: true },
   ];
+
+//   const carConst
  return (
-    <div>
+    <div className="homework_06_page_wrapper">
       {cars.map((car:Car, index: number) => (
         <div className="card" key={index}>
-          <p>Brand: {car.brand}</p>
-          <p>Price: {car.price}</p>
-          <p>Diesel: {car.isDiesel ? "Yes" : "No"}</p>
+          <p className="card-info">Brand: {car.brand}</p>
+          <p className="card-info">Price: {car.price}</p>
+          <p className="card-info">Diesel: {car.isDiesel ? "Yes" : "No"}</p>
         </div>
       ))}
     </div>
