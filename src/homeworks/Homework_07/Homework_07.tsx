@@ -13,7 +13,7 @@ function Homework_07() {
    };
 
   const onDislike = (): void => {
-    setDislike((prevValue) => prevValue + 1);
+    setDislike((prevValue: number): number => prevValue + 1);
   };
 
   const resetResults = (): void => {

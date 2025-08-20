@@ -5,4 +5,6 @@ export interface ButtonProps {
   name: string;
   onClick?: () => void;
   children?: ReactNode;
+  isRed?: boolean; 
+  disabled?:boolean;
 }
