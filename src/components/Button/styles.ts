@@ -31,7 +31,7 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   padding: 0;
   height: 70px;
   width: 100%;
-  background-color: generateButton(isRed, disabled);
+  background-color: generateButtonColor(isRed, disabled);
   color: white;
   font-size: 20px;
   font-weight: bold;
