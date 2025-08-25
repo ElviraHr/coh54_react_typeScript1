@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+interface IsError {
+  $error: boolean;
+}
+
 export const PageWrapper = styled.div`
   display: flex;
   flex: 1;
@@ -9,11 +13,11 @@ export const PageWrapper = styled.div`
   background-color: rgba(0, 10, 66, 0.9);
 `;
 
-export const Text = styled.p`
+export const Text = styled.p<IsError>`
   font-size: 20px;
-  color: black;
+  color: ${({ $error }) => ($error ? "red" : "black")};
 `;
-export const Card = styled.div`
+export const Card = styled.div<IsError>`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -21,7 +25,7 @@ export const Card = styled.div`
   width: 600px;
   min-height: 400px;
   padding: 30px;
-  border: 1px solid black;
+  border: ${({ $error }) => ($error ? "1px solid red" : "1px solid black")};
   border-radius: 10px;
   background-color: white;
 `;

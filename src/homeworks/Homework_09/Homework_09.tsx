@@ -7,6 +7,7 @@ function Homework_09() {
   const JOKE_URL: string = "https://official-joke-api.appspot.com/random_joke";
 
   const [joke, setJoke] = useState<string>("");
+  let err :boolean = false;
 
   const getJoke = async () => {
     const response = await fetch(JOKE_URL, {
@@ -17,9 +18,10 @@ function Homework_09() {
     console.log("!!!!" + result);
 
     if (response.ok) {
-      setJoke(result.setup + "\r\n" + result.punchline);
+      setJoke(result.setup + "\n" + result.punchline);
     } else {
       setJoke("Some Network Error");
+      err = true;
     }
   };
 
@@ -29,8 +31,8 @@ function Homework_09() {
 
   return (
     <PageWrapper>
-      <Card>
-        <Text>{joke} </Text>
+      <Card $error={err}>
+        <Text $error={err}>{joke} </Text>
 
         <Button name="Get new Joke" onClick={getJoke}></Button>
       </Card>
